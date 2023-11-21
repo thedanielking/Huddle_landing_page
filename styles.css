@@ -1,0 +1,210 @@
+:root{
+    --clr-primary-300: hsl(257, 40%, 49%);
+    --clr-primary-100: hsl(300, 18%, 97%);
+    --clr-primary-200: hsl(300, 7%, 80%);
+    --clr-secondary-300: hsl(300, 69%, 71%);
+
+        --ff-accent: 'Poppins', serif;
+        --ff-base: 'Open Sans', sans-serif;
+        
+        --fw-regular:400 ;
+        --fw-bold: 600 ;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box
+}
+
+*{
+    margin: 0;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3{
+    line-height: 1;
+}
+
+/* general styles */
+body{
+    min-height: 100vh;
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--clr-primary-300);
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    color: var(--clr-primary-200);
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100vh;
+    margin-left: 20px;
+
+}
+
+
+.huddle{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    margin: 0 2rem;
+    max-width: 1000px;
+}
+
+.logo img{
+    width: 190px;
+    padding-bottom: 20px;
+
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.huddle_content{
+    max-width: 455px;
+    text-overflow: clip;
+}
+
+
+.huddle__title{
+    color: var(--clr-primary-100);
+    font-family: var(--ff-base);
+    margin-bottom: 20px;
+}
+
+.huddle_content p{
+    font-family: var(--ff-base);
+    color: var(--clr-primary-100);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.huddle_content a{
+    display: inline-block;
+    font-family: var(--ff-base);
+    text-decoration: none;
+    background-color: var(--clr-primary-100);
+    padding: 13px 50px;
+    border-radius: 25px;
+    box-shadow: 0 8px 17px -8px rgba(0, 0, 0, 0);
+    transition: all .3s ease;
+
+}
+
+.huddle_content a:hover{
+    background-color: var(--clr-secondary-300);
+    color: var(--clr-primary-100);
+}
+
+
+.huddle__social {
+  text-align: right;
+}
+.huddle__social a i{
+    color: var(--clr-primary-100);
+    font-size: 18px;
+    position: relative; /*this is because we using a pseudo elememt for the cirlces so i can give it absolute*/
+    transition: all .3s ease;
+}
+
+.huddle__social a:not(:first-child){
+    margin-left: 2rem;
+}
+
+.huddle__social a i::after{
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--clr-primary-100);
+    border-radius: 50%;
+    left: -13px; /* after setting this, we went to the inspect page on our web broswer to
+    change or toggle the pixel setting for or links in other to get the exact position inside
+    the circle created*/
+    bottom: -10px;
+    transition: all .3s ease;
+}
+
+.huddle__social a:nth-child(2){
+    margin-left: 2.5rem;
+}
+
+
+.huddle__social a i:hover{
+    color: var(--clr-secondary-300);
+}
+
+.huddle__social a i:hover::after{
+    border-color: var(--clr-secondary-300);
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1440px){
+    .huddle_img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .main{
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .huddle__title{
+        font-size: 26px;
+    }
+
+    .huddle__social{
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .huddle_content a{
+        padding: 10px 70px;
+    }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
