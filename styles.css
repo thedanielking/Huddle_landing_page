@@ -44,7 +44,7 @@ h1, h2, h3{
 /* general styles */
 body{
     min-height: 100vh;
-    background-image: url(images/bg-mobile.svg);
+    background-image: url(bg-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--clr-primary-300);
